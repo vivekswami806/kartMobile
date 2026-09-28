@@ -7,9 +7,11 @@
     "icon": "./assets/images/icon.png",
     "scheme": "kartmobile",
     "userInterfaceStyle": "automatic",
+
     "ios": {
       "icon": "./assets/expo.icon"
     },
+
     "android": {
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
@@ -19,12 +21,15 @@
       },
       "predictiveBackGestureEnabled": false
     },
+
     "web": {
       "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
+
     "plugins": [
       "expo-router",
+
       [
         "expo-splash-screen",
         {
@@ -32,8 +37,18 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 76
         }
-      ]
+      ],
+
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Krikart uses your location to find your delivery area."
+        }
+      ],
+
+      "expo-secure-store"
     ],
+
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
